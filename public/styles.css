@@ -1,0 +1,115 @@
+body {
+  background: #c9dbe9;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+.logo {
+  width: 150px;
+  shape-outside: circle();
+  shape-margin: 10px;
+  float: left;
+  border-radius: 50%;
+  padding-right: 15px
+}
+
+
+.image {
+  position: relative;
+  top: -55px; left: 50px;
+  border-radius: 100px;
+}
+
+.video {
+  position: relative;
+  left: 100px; bottom: 75px;
+  border-radius: 50px;
+}
+
+.clouds {
+	padding: 100px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.cloud {
+	background: #fff;
+
+	border-radius: 200px;
+	-moz-border-radius: 200px;
+	-webkit-border-radius: 200px;
+
+	position: relative;
+  padding: 40px;
+}
+
+@media (max-width: 1000px) {
+  .clouds {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.cloud:before, .cloud:after {
+	content: '';
+	position: absolute;
+	background: #fff;
+	width: 50%; height: 120%;
+	position: absolute; top: -31%; left: 7%;
+
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+  z-index: -1
+}
+
+.cloud:after {
+	width: 50%; height: 150%;
+	/*top: -55px; left: auto; right: 15px;*/
+  /*denne var vel sistetop: -150px; left: auto; right: 160px;*/
+  top: -56%; left: 43%; right: 20%;
+}
+
+@media (max-width: 1000px) {
+  .mobile-hidden {
+    display: none;
+  }
+}
+
+@media (max-width: 414px) {
+  .logo {
+    float: none;
+    justify-content: center;
+    width: 100px;
+  }
+  h1 {
+    font-size: 1em;
+  }
+  body {
+    margin-top: 25px;
+  }
+  .clouds {
+    padding: 15px 10px 15px 10px;
+  }
+  .cloud:before {
+    display: none;
+  }
+
+  .cloud:after {
+    display: none;
+  }
+}
